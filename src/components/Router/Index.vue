@@ -20,8 +20,7 @@
     <button @click="goTo(1)" >路由1</button>
     <button @click="goTo(2)" >路由2</button>
 
-    <input type="button" value="前进" @click="next"/>
-    <input type="button" value="后进" @click="prevent"/>
+
   </div>
 </template>
 
@@ -43,12 +42,6 @@
                     // 使用query传递参数
                     this.$router.replace({path:'/word/router2',query:{id:456}});
                 }
-            },
-            next(){
-                this.$router.go(1);
-            },
-            prevent(){
-                this.$router.go(-1);
             }
         }
     }

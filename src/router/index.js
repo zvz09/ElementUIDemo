@@ -5,11 +5,27 @@ import Word from '@/components/Router/Word'
 import Router1 from '@/components/Router/Router1'
 import Router2 from '@/components/Router/Router2'
 import Router3 from '@/components/Router/Router3'
+import ElementUIsIndex from '@/components/ElementUIs/Index'
+import LayoutBasis from '@/components/ElementUIs/Layout/Basis.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/ElementUIPage',
+      component :ElementUIsIndex
+    },
+    {
+      path:'/ElementUIPage',
+      component :ElementUIsIndex,
+      children:[
+        {
+          path:'LayoutBasis',
+          component:LayoutBasis
+        }
+      ]
+    },
     {
       path:'/routerPage',
       component :RouTerIndex
