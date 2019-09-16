@@ -1,18 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import Word from '@/components/Word'
-import Router1 from '@/components/Router1'
-import Router2 from '@/components/Router2'
-import Router3 from '@/components/Router3'
+import RouTerIndex from '@/components/Router/Index'
+import Word from '@/components/Router/Word'
+import Router1 from '@/components/Router/Router1'
+import Router2 from '@/components/Router/Router2'
+import Router3 from '@/components/Router/Router3'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      component: Hello
+      path:'/routerPage',
+      component :RouTerIndex
     },
     {
       path:'/index',
