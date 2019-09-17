@@ -6,7 +6,7 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import store from "./store";
 import axios from 'axios'
-import Mock from './mock' //也可以不写index.js
+import Mock from '../mock' //也可以不写index.js
 
 
 // 如果process.env.Mock == true执行startMock()
