@@ -11,6 +11,9 @@
       <button @click="handleActionsAdd(10)">异步增加</button>
       <button @click="handleActionsReduce(10)">异步减少</button>
     </div>
+    <div>
+      <button @click="getSomeThing()">获取某些东西</button>
+    </div>
     <h3>{{title}}</h3>
     <ul>
       <li><router-link to="/routerPage">路由测试页面</router-link></li>
@@ -18,7 +21,6 @@
     </ul>
     <input type="button" value="前进" @click="next"/>
     <input type="button" value="后进" @click="prevent"/>
-    <h4>{{count}}</h4>
     <!--定义路由插座-->
     <router-view></router-view>
     <!--可以定义不变的内容-->
@@ -34,6 +36,9 @@
                 title:'我是项目主入口',
                 word:'/word'
             }
+        },
+        mounted(){
+            console.log(process.env.MOCK);
         },
         methods:{
             next(){
@@ -53,6 +58,11 @@
             },
             handleActionsReduce(n){
                 this.$store.dispatch('actionsReduceCount',n)
+            },
+            getSomeThing(){
+                this.$ajax.get('/list/index').then(function (res) {
+                    console.log(res);
+                })
             }
         }
     }
