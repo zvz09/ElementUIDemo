@@ -20,8 +20,8 @@ Vue.prototype.$ajax = axios;
  * 配置BaseUrl  配置下我们访问的Url前缀
  * 关键代码是：Axios.defaults.baseURL = '/api'，这样每次发送请求都会带一个/api的前缀。
  */
-/*axios.defaults.baseURL = '/api'
-axios.defaults.headers.post['Content-Type'] = 'application/json';*/
+axios.defaults.baseURL = '/api'
+axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 Vue.use(Element);
 

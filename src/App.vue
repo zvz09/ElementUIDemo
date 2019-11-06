@@ -60,9 +60,16 @@
                 this.$store.dispatch('actionsReduceCount',n)
             },
             getSomeThing(){
-                this.$ajax.get('/list/index').then(function (res) {
+               /* this.$ajax.get('/list/index').then(function (res) {
                     console.log(res);
-                })
+                })*/
+              this.$ajax.get("/site/info.json")
+                .then(res=>{
+                console.log(res)
+              })
+            .catch(err=>{
+                console.log(err)
+              })
             }
         }
     }
